@@ -1,5 +1,4 @@
 # my-website
-# Airi Arai Portfolio Website
 
 このリポジトリは、荒井愛理（Airi Arai）のポートフォリオサイトのコードをまとめたものです。
 GitHub Pagesにて公開しています。
