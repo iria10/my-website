@@ -3,8 +3,6 @@
 このリポジトリは、荒井愛理（Airi Arai）のポートフォリオサイトのコードをまとめたものです。
 GitHub Pagesにて公開しています。
 
-**公開サイト: [https://iria10.github.io/my-website/](https://iria10.github.io/my-website/)**
-
 ## 使用技術
 * HTML5 / CSS3
 * JavaScript
