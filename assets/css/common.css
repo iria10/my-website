@@ -1,0 +1,285 @@
+@charset "UTF-8";
+
+/* --- 1. 全体の基本設定 --- */
+body {
+    background-color: #fdfcf7;
+    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    padding-top: 70px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.section {
+    padding: 100px 5%;
+    box-sizing: border-box;
+}
+
+.main__innner {
+    max-width: 1100px;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- 2. ヘッダー --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdfcf7;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    height: 70px;
+    padding: 0 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    box-sizing: border-box;
+}
+
+
+
+/* --- ヘッダーのレイアウト調整 --- */
+.header .main__innner {
+    display: flex;
+    justify-content: space-between; /* 中身を両端に配置 */
+    align-items: center;            /* 中身を垂直方向の中央に配置 */
+}
+
+.header__logo-text {
+    display: inline-block;
+    position: relative;
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+    padding: 0 0.2em;
+    line-height: 1.2;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.header__logo-text::before,
+.header__logo-text::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}
+
+.header__logo-text::before {
+    top: -5px;
+}
+
+.header__logo-text::after {
+    bottom: -5px;
+}
+
+.header__logo-text:hover::before,
+.header__logo-text:hover::after {
+    transform: scaleX(0);
+}
+
+/* --- 3. ナビゲーションとハンバーガー --- */
+.nav {
+    width: auto; 
+}
+
+.nav__toggle {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    width: 28px;
+    height: 15px;
+    z-index: 1002;
+}
+
+.nav__toggle-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.nav__toggle-line:nth-child(1) { top: 0; }
+.nav__toggle-line:nth-child(2) { top: 9px; }
+
+.nav__toggle.active .nav__toggle-line:nth-child(1) {
+    transform: translateY(4.5px) rotate(45deg);
+    background-color: #fff;
+}
+
+.nav__toggle.active .nav__toggle-line:nth-child(2) {
+    transform: translateY(-4.5px) rotate(-45deg);
+    background-color: #fff;
+}
+
+.nav__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #7db8b3;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.nav__menu.show-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav__link {
+    font-size: 1.8rem;
+    color:#fff;
+    font-weight: bold;
+}
+
+/* --- 4. フッター --- */
+.footer {
+    text-align: left;
+    padding: 4rem 5%;
+    font-family: sans-serif;
+    background-color: #fdfcf7;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer__line {
+    display: none;
+}
+
+.footer__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+        "logo nav"
+        "copy social";
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.footer-logo { 
+    grid-area: logo; 
+}
+
+.footer-nav { 
+    grid-area: nav; 
+    justify-self: end;
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-copy { 
+    grid-area: copy; 
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.footer-copy p {
+    margin: 0;
+}
+
+.footer-social { 
+    grid-area: social; 
+    justify-self: end;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.footer-nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.button-link-social {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #ccc;
+    color: #555;
+    text-decoration: none;
+    font-size: 0.8rem;
+    border-radius: 99px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.button-link-social:hover {
+    background-color: #f0f0f0;
+}
+
+/* --- 5. スマホ用レスポンシブ --- */
+@media (max-width: 768px) {
+    .footer__inner {
+        grid-template-areas: 
+            "logo social"
+            "copy nav";
+        gap: 1.5rem;
+    }
+    
+    .footer-nav { 
+        justify-self: start;
+    }
+    .footer-social { 
+        justify-self: end;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer__inner {
+        grid-template-areas: 
+            "logo"
+            "nav"
+            "social"
+            "copy";
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    .footer-nav,
+    .footer-social { 
+        justify-self: start; 
+    }
+}

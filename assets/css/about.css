@@ -1,0 +1,505 @@
+@charset "UTF-8";
+
+/* --- About (#about) --- */
+
+.about .main__heading {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.about .main__heading .section-title {
+  font-size: 4.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.about .main__heading .section-subtitle {
+  font-size: 1rem;
+  color: #888;
+  letter-spacing: 0.1em;
+  font-family: sans-serif;
+  margin-top: 10px;
+}
+
+/* Aboutのレイアウトコンテナ (1ブロック目) */
+.section-about_body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
+/* テキストブロック (1ブロック目) */
+.section-about_body-inner {
+  text-align: left;
+}
+
+.section-about_title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.section-about_subtitle {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.section-about_body-inner .section-about_text,
+.section-about_body-inner .section-about_text_en {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* 横並びコンテンツ (2ブロック目) */
+.about-feature-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-feature-block.reverse {
+  grid-template-areas: "image text";
+}
+
+.about-feature-block.reverse .section-about_text {
+  grid-area: text;
+}
+
+.about-feature-block.reverse .about-feature__img {
+  grid-area: image;
+}
+
+/* テキスト (2ブロック目) */
+.about-feature-block .section-about_text {
+  font-size: 1rem;
+  line-height: 2.2;
+  letter-spacing: 0.05em;
+}
+
+.about-feature-block .section-about_text_en {
+  font-size: 0.8rem;
+  color: #777;
+  line-height: 1.7;
+  margin-top: 1rem;
+  font-family: sans-serif;
+}
+
+/* 汎用画像スタイル */
+.about-feature__img {
+  margin: 0;
+  background-color: #eee;
+  min-height: 350px;
+}
+
+.about-feature__img img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Read More ボタン */
+.main_readmore {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+/* スクロールコンテナ */
+.swiper-explanation__contents.swiper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+}
+
+/* アイテムを横並びにするラッパー */
+.swiper-wrapper {
+  display: flex;
+  gap: 20px;
+  width: auto;
+}
+
+/* 個別のカード（スライド） */
+.swiper-slide {
+  flex: 0 0 auto;
+  width: 90%;
+  max-width: 330px;
+  scroll-snap-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* カード内部のラッパー */
+.swiper-slider__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* テキスト本文のラッパー */
+.swiper-explanation__text {
+  flex-grow: 1;
+}
+
+.Background {
+  background-color: #0b4b46;
+}
+
+.Background .main__heading .section-title {
+  color: #fff;
+}
+
+.Background .main__heading .section-subtitle {
+  color: #d9d7d7;
+}
+
+.biography-text {
+  position: relative;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 0.2rem;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.biography-title {
+  font-size: 1.2rem;
+}
+
+.biography-subtitle {
+  color: #0b4b46;
+  font-size: 0.8rem;
+}
+
+/* スクロールバー */
+.swiper-explanation__contents.swiper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.swiper-explanation__contents.swiper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.swiper-explanation__contents.swiper::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.swiper-explanation__contents.swiper::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* --- Skill (#skill) --- */
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  position: relative;
+  overflow: hidden;
+  background-color: #9ad1cc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.skill-card__content {
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem 2rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.skill-card__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #292828;
+  margin-bottom: 0.5rem;
+  flex-shrink: 0;
+}
+
+.skill-card__text {
+  position: relative;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 0.2rem;
+  flex-grow: 1;
+  overflow-y: auto;
+  color: #333;
+}
+
+.skill-card__keywords {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #444;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  flex-shrink: 0;
+}
+
+/* --- Profile Table (#profile) --- */
+
+.profile-table-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  border-top: 1px solid #ddd;
+}
+
+.profile-table__row {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: baseline;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-table__label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  text-align: right;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
+.profile-table__value {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* --- Strength (#strength) --- */
+
+.strength {
+  background-color: #f8f8f8;
+}
+
+.strength-list {
+  max-width: 1100px;
+  margin: 0 auto;
+  border-top: 1px solid #ddd;
+}
+
+.strength-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.strength-item__left {
+  flex: 0 0 200px;
+  padding-right: 2rem;
+  text-align: right;
+}
+
+.strength-item__number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.strength-item__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.strength-item__right {
+  flex-grow: 1;
+  padding-left: 2rem;
+  border-left: 1px solid #eee;
+}
+
+.strength-item__text {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* --- 9 Pieces (#pieces) --- */
+
+.pieces {
+  background-color: #f8f8f8;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sample-img {
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.sample-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+
+.sample-img:hover img {
+  transform: scale(1.1);
+}
+
+/* --- 共通セクション見出し --- */
+
+.Background .main__heading,
+.skill .main__heading,
+.strength .main__heading,
+.pieces .main__heading,
+.profile-table .main__heading,
+.profile-timeline .main__heading {
+  text-align: left;
+  margin-bottom: 3rem;
+  padding-left: 5%;
+}
+
+.Background .main__heading .section-title,
+.skill .main__heading .section-title,
+.strength .main__heading .section-title,
+.pieces .main__heading .section-title,
+.profile-table .main__heading .section-title,
+.profile-timeline .main__heading .section-title {
+  font-size: 3rem;
+  color: #333;
+  font-weight: bold;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: baseline;
+  margin: 0;
+}
+
+.Background .main__heading .section-subtitle,
+.skill .main__heading .section-subtitle,
+.strength .main__heading .section-subtitle,
+.pieces .main__heading .section-subtitle,
+.profile-table .main__heading .section-subtitle,
+.profile-timeline .main__heading .section-subtitle {
+  font-size: 1rem;
+  color: #888;
+  letter-spacing: 0.1em;
+  font-family: sans-serif;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: baseline;
+  margin: 0 0 0 1rem;
+}
+
+/* --- スマホ用レスポンシブ --- */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 8%;
+  }
+
+  /* Aboutセクション */
+  .section-about_body {
+    grid-template-columns: 1fr;
+  }
+
+  /* Skillセクション */
+  .skill-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Profile Table */
+  .profile-table__row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .profile-table__label {
+    text-align: left;
+    padding-right: 0;
+    font-size: 0.9rem;
+    color: #888;
+  }
+
+  .profile-table__value {
+    font-size: 0.95rem;
+  }
+
+  /* Strengthセクション */
+  .strength-item {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  .strength-item__left {
+    flex: none;
+    width: 100%;
+    padding-right: 0;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .strength-item__right {
+    padding-left: 0;
+    border-left: none;
+    text-align: center;
+  }
+
+  /* 共通見出し */
+  .Background .main__heading,
+  .skill .main__heading,
+  .strength .main__heading,
+  .pieces .main__heading,
+  .profile-table .main__heading,
+  .profile-timeline .main__heading {
+    padding-left: 8%;
+  }
+
+  .Background .main__heading .section-title,
+  .skill .main__heading .section-title,
+  .strength .main__heading .section-title,
+  .pieces .main__heading .section-title,
+  .profile-table .main__heading .section-title,
+  .profile-timeline .main__heading .section-title {
+    font-size: 2rem;
+  }
+
+  .Background .main__heading .section-subtitle,
+  .skill .main__heading .section-subtitle,
+  .strength .main__heading .section-subtitle,
+  .pieces .main__heading .section-subtitle,
+  .profile-table .main__heading .section-subtitle,
+  .profile-timeline .main__heading .section-subtitle {
+    font-size: 0.8rem;
+  }
+}

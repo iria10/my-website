@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8"> <!-- 文字化けを防ぐ設定-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 画面幅に対応できる表示設定-->
+        <meta name="robots" content="noindex, nofollow"><!--クローラー（検索エンジン）への指示：このページをインデックスしない、かつリンクも辿らない。-->
+       <!--<meta property="og:url" content="assets/images/common/ogp.png"> --> 
+        <meta property="og:title" content="Airi Arai Portfolio">
+        <meta property="og:description" content="フロントエンドエンジニアを目指す荒井愛理のポートフォリオサイトです。">
+       <!--<meta property="og:image" content=""> --> 
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="ja_JP">
+        <meta property="og:site_name" content="Airi Arai Portfolio website">
+
+        
+      <!--外部CSSファイルを読み込み-->
+      <link rel="stylesheet" href="assets/css/reset.css">  <!--ブラウザ間のデフォルトスタイル差をリセットするためのファイル。最初に読み込む-->
+      <link rel="stylesheet" href="assets/css/common.css?=v6"> <!--サイト全体共通のcss-->
+      <link rel="stylesheet" href="assets/css/top.css?=v7">    <!--index.html専用のcss-->
+      <!--<link rel="stylesheet" href="assets/css/nav__menu.css"> -->
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <!-- <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"><!-- Font Awesome-->
+
+        <!-- =====BOX ICONS===== -->
+       <!-- <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>-->
+
+        <title>Airi Arai Portfolio website</title>
+    </head>
+
+    <body>
+     <!--ヘッダー部分-->
+<header class="header">
+    <div class="main__innner"> <a href="https://nkmr.io/~arai/port/index.html" class="header__logo">
+            <h1 class="header__logo-text">AIRI ARAI</h1> 
+        </a>
+        
+    </div>
+        <nav class="nav">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="about/index.html" class="nav__link nav-link">About</a></li>
+                    <li><a href="work/index.html" class="nav__link nav-link">Work</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+            </div>
+        </nav> 
+</header>
+
+     <!--home（メイン）-->
+      <section class="home-section" id="home">
+ 
+        <div class="circle circle-left"></div>
+        <div class="circle circle-right"></div>
+
+     
+    <div class="main__innner">
+      <div class="section-mv__text-area fadein">
+       <h1 class="section-home__title">Airi Arai<br>Portfolio</h1>
+       <p class="section-home__subtitle">   a page to make someone aware of airi</p>
+    </div></div>
+     </section>
+
+     <!--about-->
+     <section class="about section" id="about">
+      <div class="main__innner"><!--これ何？-->
+       <div class="main__heading main__works-heading"><!--これ何？-->
+       <h2 class= "section-title">About</h2>
+       <p class= "section-subtitle">私のこと</p>
+      </div>
+
+ <div class ="section-about_body">
+  <div class="section-about_body-inner">
+
+   <h3 class="section-about_title">Airi Arai</h3>
+   <p class="section-about_subtitle">荒井 愛理</p>
+   <p class="section-about_text">東京都立国分寺高等学校を卒業後、明治大学総合数理学部先端メディアサイエンス学科・橋本直研究室に現在所属しています。</p>
+   <p class="section-about_text_en">現在は、従来の紙の絵本にテクノロジーを融合させ、新しい物語体験を創出する研究に取り組んでいます。就職活動では、Webアプリケーションエンジニアの中でもフロントエンド分野を志望しています。</p>
+  </div>
+
+  <figure class="about-feature__img">
+  <img src="assets/images/top/me.jpg"  alt="荒井愛理">
+  </figure>
+</div>
+
+
+
+  <div class="main_readmore">
+  <a href="about/index.html" class="button-link arrow-extend">
+    <span class="button-text">Read More</span>
+  </a>
+  </div>
+
+    </div>
+
+    </section>
+
+
+     <!--work-->
+     <section class="work section" id="work">
+      <div class="main__innner"><!--これ何？-->
+       <div class="main__heading main__works-heading"><!--これ何？-->
+       <h2 class= "section-title">Work</h2>
+       <p class= "section-subtitle">制作物</p>
+      </div>
+
+      <div class ="section-works_item"><!--各workを紹介している画面-->
+      <article class ="section-works_box"><!--workの紹介その1-->
+        <a class ="section-works_link" href="work/work1.html"><!--ここでまとめることによってこの範囲を選択している時はおんなじURLに飛べるようになっている-->
+         <figure>
+           <img src="assets/images/work/work1.png" alt="MY PORTFOLIO">
+         </figure>
+         </a>
+        
+        <div class="section-works_description">
+         <div class ="section-works_tag-item"><!--タグの種類→個人制作・共同制作-->
+            <p class="section-works__tag">個人制作</p>
+            <p class="section-works__subtag">Design/Coding</p> <!--サブタグの種類→design・Cording・study(研究)-->
+         </div>
+
+         <h3 class="section-works_item_title">MY PORTFOLIO</h3>
+        </div>
+      </article>
+
+           <article class ="section-works_box"><!--workの紹介その2-->
+        <a class ="section-works_link" href="work/work2.html"><!--ここでまとめることによってこの範囲を選択している時はおんなじURLに飛べるようになっている-->
+         <figure>
+    <img src="assets/images/work/work2.png" alt="TRASH NAVIGATION">
+         </figure>
+         </a>
+
+         <div class="section-works_description">
+         <div class ="section-works_tag-item"><!--タグの種類→個人制作・共同制作-->
+            <p class="section-works__tag">共同作成</p>
+            <p class="section-works__subtag">Design/Coding</p> <!--サブタグの種類→design・Cording・study(研究)-->
+         </div>
+
+         <h3 class="section-works_item_title">TRASH NAVIGATION</h3>
+        </div>
+      </article>
+
+    <article class ="section-works_box"><!--workの紹介その3-->
+        <a class ="section-works_link" href="work/work3.html"><!--ここでまとめることによってこの範囲を選択している時はおんなじURLに飛べるようになっている-->
+         <figure>
+           <img src="assets/images/work/work3.png" alt="research">
+         </figure>
+         </a>
+
+         <div class="section-works_description">
+         <div class ="section-works_tag-item"><!--タグの種類→個人制作・共同制作-->
+            <p class="section-works__tag">共同作成</p>
+            <p class="section-works__subtag">study(研究内容)</p> <!--サブタグの種類→design・Cording・study(研究)-->
+         </div>
+
+         <h3 class="section-works_item_title">現在行っている研究について</h3>
+        </div>
+      </article>
+
+      </div>
+      
+        <div class="main_readmore">
+         <a href="work/index.html" class="button-link arrow-extend">
+          <span class="button-text">Read More</span>
+         </a>
+       </div>
+     </div>
+     </section>
+
+
+    <footer class="footer">
+        <div class="footer__inner">
+            
+            <div class="footer-logo">
+                <a href="https://nkmr.io/~arai/port/index.html" class="nav__logo header__logo-text">AIRI ARAI</a>
+            </div>
+
+            <nav class="footer-nav">
+                <a href="about/index.html">About</a>
+                <a href="work/index.html">Works</a>
+
+            </nav>
+
+            <div class="footer-copy">
+                <p>&copy; 2025 ARAI AIRI</p>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://github.com/iria10" class="button-link-social">GitHub</a>
+                <a href="mailto:iria.auzxozicg.1@gmail.com" class="button-link-social">Email</a>
+            </div>
+
+        </div>
+    </footer>
+
+
+      <script src="assets/js/top.js"></script>
+       <script src="assets/js/common.js"></script><!--jsの繁栄-->
+      <!-- <script src="assets/js/nav_menu.js"></script> -->
+    </body>
+</html>

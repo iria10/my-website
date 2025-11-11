@@ -1,0 +1,433 @@
+@charset "UTF-8";
+
+/* --- 1. メインビジュアル (#home) --- */
+.home-section {
+    background-color: transparent;
+    height: 100vh;
+    display: flex;
+    align-items: center; 
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(-50%) translateY(0px);
+    }
+    50% {
+        transform: translateY(-50%) translateY(-15px);
+    }
+    100% {
+        transform: translateY(-50%) translateY(0px);
+    }
+}
+
+.fadein {
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    top: 45%;
+    transform: translateY(-50%); 
+    animation: float 4s ease-in-out infinite;
+    transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+}
+
+.circle-left {
+    width: 590px; 
+    height: 590px;
+    background-color: #000;
+    left: 8%; 
+    z-index: -1;
+}
+
+.circle-right {
+    width: 590px; 
+    height: 590px;
+    background-image: url('../images/top/tex_circle.png'); 
+    background-size: cover;
+    background-position: center;
+    right: 5%; 
+    z-index: 0;
+    opacity: 0.8;
+    animation-delay: 0.5s;
+    animation-direction: alternate;
+}
+
+.section-mv__text-area {
+    background: none; 
+    padding: 0;
+    position: relative; 
+    z-index: 1;
+    margin-left: 10%;
+    opacity: 1;
+    transition: opacity 0.1s ease-out;
+}
+
+.section-home__title {
+    font-size: 5rem;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.section-home_subtitle {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+    font-family: "Georgia", "Times New Roman", Times, serif;
+}
+
+/* --- 2. About (#about) --- */
+
+.about .main__heading {
+    text-align: center; 
+    margin-bottom: 4rem;
+}
+
+.about .main__heading .section-title {
+    font-size: 4.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.about .main__heading .section-subtitle {
+    font-size: 1rem;
+    color: #888;
+    letter-spacing: 0.1em;
+    font-family: sans-serif;
+    margin-top: 10px;
+}
+
+.section-about_body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.section-about_body-inner {
+    text-align: left;
+}
+
+.section-about_title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+.section-about_subtitle {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.section-about_body-inner .section-about_text,
+.section-about_body-inner .section-about_text_en {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.about-feature-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-feature-block.reverse {
+    grid-template-areas: "image text";
+}
+
+.about-feature-block.reverse .section-about_text {
+    grid-area: text;
+}
+
+.about-feature-block.reverse .about-feature__img {
+    grid-area: image;
+}
+
+.about-feature__img {
+    margin: 0;
+    background-color: #eee;
+    min-height: 350px;
+}
+
+.about-feature__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.main_readmore {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+/* --- 3. Work (#work) --- */
+
+.work.section {
+    position: relative;
+    margin-top: 160px;
+    padding-top: 0;
+    padding-bottom: 120px;
+    background-color: transparent;
+    margin-bottom: 3rem;
+}
+
+.work.section::after {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 38px);
+    background-color: #7db8b3;
+    z-index: -1;
+}
+
+.work .main__heading {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.work .main__heading .section-title {
+    font-size: 4.5rem;
+    color: #000000;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.work .main__heading .section-subtitle {
+    font-size: 1.3rem;
+    color: #f7f1f1;
+    letter-spacing: 0.1em;
+    font-family: sans-serif;
+    margin-top: 10px;
+}
+
+.section-works_item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.section-works_box {
+    width: 100%;
+    background-color: #f7f1f1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.section-works_box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.section-works_link {
+    display: block;
+    text-decoration: none;
+}
+
+.section-works_link figure {
+    margin: 0;
+    background-color: #eee;
+    min-height: 250px;
+}
+
+.section-works_link img {
+    width: 100%;
+    display: block; 
+    height: 300px; 
+    object-fit: cover; 
+}
+
+.section-works_description {
+    padding: 1rem 1.25rem;
+    font-family: sans-serif;
+}
+
+.section-works_tag-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.section-works__tag {
+    display: block;
+    background-color: #035e4a;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0px;
+}
+
+.section-works__subtag {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.section-works_item_title {
+    display: block;
+    font-size: 1.25rem;
+    color: #222;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+/* --- 4. "Read More" ボタン (汎用) --- */
+
+.main_readmore {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    border: 1px solid #333;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #333;
+    color: #fdfcf7;
+}
+
+.arrow-extend .button-text {
+    padding-right: 0;
+}
+
+.arrow-extend .button-text::after {
+    display: none;
+}
+
+/* --- 5. スマホ用レスポンシブ --- */
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 8%;
+    }
+
+    .home-section {
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .circle-left {
+        width: 330px;
+        height: 330px;
+        left: 45px;
+        top: 45%;
+    }
+    .circle-right {
+        width: 350px;
+        height: 350px;
+        right: 30px;
+        top: 30%;
+    }
+
+     .section-mv__text-area {
+        position: relative;
+        bottom: 40%;
+        width: auto; 
+        margin-left: 6%;
+        text-align: left;
+        z-index: 1;
+        opacity: 1;
+        transition: opacity 0.1s ease-out;
+    }
+
+    .section-home__title {
+        margin-left: 5%;
+        font-size: 2rem;
+        color: #fff;
+    }
+    .section-home_subtitle {
+        font-size: 1.2rem;
+        color: #fff;
+    }
+
+    .nav__lang,
+    .nav__contact-btn {
+        display: none;
+    }
+
+    .section-about_body {
+        grid-template-columns: 1fr;
+    }
+
+    .about-feature__img {
+        width: 80%; 
+        margin: 0 auto 2rem auto; 
+        min-height: 400px; 
+    }
+
+    .section-works_item_title {
+        font-size: 1.8rem;
+    }
+
+    .section-works_item {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .about-feature__img {
+        width: 80%; 
+        margin: 0 auto 2rem auto; 
+        min-height: 350px; 
+        object-fit: cover;
+    }
+
+    
+     .section-mv__text-area {
+        position: relative;
+        bottom: 50%;
+        width: auto; 
+        margin-left: 15%;
+        text-align: left;
+        z-index: 1;
+        opacity: 1;
+        transition: opacity 0.1s ease-out;
+    }
+    .section-home__title {
+        margin-left:10%;
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    .section-home_subtitle {
+        font-size: 1rem;
+        color: #fff;
+    }
+}
